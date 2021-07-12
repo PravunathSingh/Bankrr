@@ -15,4 +15,12 @@
   .btn-secondary {
     @apply px-8 py-2 text-xl font-bold text-center transition-all rounded-lg bg-brand-secondary text-brand-text hover:bg-brand-primary hover:-translate-y-1;
   }
+
+  .tooltip {
+    @apply absolute invisible;
+  }
+
+  .has-tooltip:hover .tooltip {
+    @apply z-50 visible;
+  }
 }

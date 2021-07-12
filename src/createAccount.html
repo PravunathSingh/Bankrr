@@ -1,17 +1,27 @@
-<?php
-require_once "include/header.php";
+<!DOCTYPE html>
+<html lang="en">
 
-require_once "include/db.php";
-?>
-
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/style.css">
+  <title>Bankrr | Dashboard</title>
+</head>
 
 <body class="bg-brand-primary">
   <section class="container">
     <div class="my-20">
       <h1 class="mb-20 text-4xl font-bold text-center md:text-5xl text-brand-text">Create Account</h1>
     </div>
-    <div class="grid place-content-center place-items-center">
-      <form method="POST" action="post/account.php" enctype = "multipart/form-data">
+    <div class="max-w-xl mx-auto">
+      <form method="POST" action="post/account.php" enctype="multipart/form-data" id="form1">
         <div
           class="grid grid-cols-2 gap-5 py-12 mb-20 shadow-xl place-content-between px-7 bg-brand-secondary rounded-xl">
           <div>
@@ -50,20 +60,20 @@ require_once "include/db.php";
                 class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
             </div>
           </div>
-           <div>
+          <div>
             <div class="mb-2">
               <label class="text-lg font-normal text-brand-text" required>Gender *</label>
             </div>
             <div class="mb-8">
-              <input type="radio" name = "gender" value = "Male"
+              <input type="radio" name="gender" value="Male"
                 class="mr-3 outline-none bg-brand-text focus:ring-1 focus:ring-brand-accent-secondary"> <span
-                class="text-base font-normal text-brand-text">Male</span> 
-              <input type="radio"  name = "gender" value = "Female"
+                class="text-base font-normal text-brand-text">Male</span>
+              <input type="radio" name="gender" value="Female"
                 class="mr-3 outline-none bg-brand-text focus:ring-1 focus:ring-brand-accent-secondary"> <span
                 class="text-base font-normal text-brand-text"> Female</span>
-              <input type="radio"  name = "gender" value = "Other"
+              <input type="radio" name="gender" value="Other"
                 class="mr-3 outline-none bg-brand-text focus:ring-1 focus:ring-brand-accent-secondary"> <span
-                class="text-base font-normal text-brand-text">Other</span> 
+                class="text-base font-normal text-brand-text">Other</span>
             </div>
           </div>
           <div class="col-span-2">
@@ -80,13 +90,13 @@ require_once "include/db.php";
               <label class="text-lg font-normal text-brand-text">Address Proof *</label>
             </div>
             <div class="mb-8">
-              <input type="radio" name = "doc" value="aadhar" 
+              <input type="radio" name="doc" value="aadhar"
                 class="mr-3 outline-none bg-brand-text focus:ring-1 focus:ring-brand-accent-secondary"> <span
                 class="text-base font-normal text-brand-text">Aadhar Card</span> <br>
-              <input type="radio"  name = "doc" value="voter" 
+              <input type="radio" name="doc" value="voter"
                 class="mr-3 outline-none bg-brand-text focus:ring-1 focus:ring-brand-accent-secondary"> <span
                 class="text-base font-normal text-brand-text">Voter ID</span> <br>
-              <input type="radio"  name = "doc" value="passport" 
+              <input type="radio" name="doc" value="passport"
                 class="mr-3 outline-none bg-brand-text focus:ring-1 focus:ring-brand-accent-secondary"> <span
                 class="text-base font-normal text-brand-text">Passport</span> <br>
             </div>
@@ -108,7 +118,10 @@ require_once "include/db.php";
                   class="p-3 -mt-12 text-sm font-light lowercase rounded shadow-lg bg-brand-primary tooltip text-brand-accent-secondary-dark">Image
                   should
                   be less than 1 MB</span> Upload User Image</span>
-              <input type="file" name="user_image" class="hidden" id="customFile" />
+              <input type="file" onchange="uploadFile()" accept="image/jpeg, image/png" name="user_image"
+                id="customFile" class="hidden" />
+              <progress id=" progressBar" value="0" max="100" style="width:150px;"></progress>
+
             </label>
           </div>
           <div class="mb-8 has-tooltip">
@@ -120,7 +133,7 @@ require_once "include/db.php";
                   Size
                   should
                   be less than 2 MB</span> Upload Documents</span>
-              <input type="file" name="doc_image" class="hidden" id="customFile" />
+              <input type="file" accept="image/jpeg, image/png" name="doc_image" class="hidden" id="customFile" />
             </label>
           </div>
           <div>
@@ -128,21 +141,9 @@ require_once "include/db.php";
               <label class="text-lg font-normal text-brand-text">Select Branch *</label>
             </div>
             <div class="mb-8">
-              <select name="branch" 
+              <select name="branch"
                 class="w-full px-5 py-2 text-lg font-normal rounded-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
-
                 <option value="">Choose Your Branch</option>
-                
-<?php 
-$query = "SELECT * FROM branch";
-                        $connection = mysqli_query($db_connection, $query);
-                       
-                        while($row = mysqli_fetch_assoc($connection))
-                        {
-                           echo '<option value="'.$row['branch_id'].'">'.$row['branch_name'].'</option>';
-                        }
-                        ?>
-                     
               </select>
             </div>
           </div>
@@ -151,7 +152,7 @@ $query = "SELECT * FROM branch";
               <label class="text-lg font-normal text-brand-text">Select Account Type*</label>
             </div>
             <div class="mb-8">
-              <select name="type" 
+              <select name="type"
                 class="w-full px-5 py-2 text-lg font-normal rounded-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
                 <option value="Savings">Savings</option>
                 <option value="Salary">Salary</option>
@@ -163,7 +164,7 @@ $query = "SELECT * FROM branch";
           <div class="has-tooltip">
             <div class="mb-2">
               <label class="text-lg font-normal text-brand-text"><span
-                  class="p-3 -mt-16 text-sm font-light text-red-300 lowercase rounded shadow-lg md:-mt-12 bg-brand-primary tooltip">Should
+                  class="p-3 -mt-16 text-sm font-light text-red-400 lowercase rounded shadow-lg md:-mt-12 bg-brand-primary tooltip">Should
                   contain at least one special character, one number, one capital case letter and minimum of 6
                   characters
                 </span>
@@ -189,10 +190,15 @@ $query = "SELECT * FROM branch";
         </div>
 
       </form>
+
+      <!-- <div class="hidden md:block">
+        <img src="../assests/online-registration-sign-up-concept-with-woman-character_268404-99-removebg-preview.png"
+          alt="">
+      </div> -->
     </div>
   </section>
 
-  <script src="./script.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>
