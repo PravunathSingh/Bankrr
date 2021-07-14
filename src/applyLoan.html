@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/style.css">
+  <title>Bankrr | Dashboard</title>
+</head>
+
+<body class="bg-brand-primary">
+  <nav class="bg-brand-primary">
+    <div class="container py-4 shadow-lg lg:py-2 md:flex md:justify-between">
+      <div class="flex items-center justify-between justify-items-center">
+        <div>
+          <a href="/" class="text-4xl font-bold lg:text-5xl text-brand-accent-primary">Bankrr</a>
+        </div>
+
+        <div class="md:hidden">
+          <button type="button" class="block" id="menuBtn">
+            <i class="fa fa-dropdown fa-bars fa-2x text-brand-text hover:text-brand-accent-secondary" id="menuIcon"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="hidden py-4 md:flex md:justify-items-center md:items-center" id="links">
+        <a href="#home"
+          class="block mb-2 text-lg font-medium md:ml-10 md:mb-0 text-brand-text hover:text-brand-accennt-primary-dark">Home</a>
+        <a href="loans.html"
+          class="block mb-2 text-lg font-medium md:ml-10 md:mb-0 text-brand-accennt-primary-dark">Loans</a>
+        <a href="offers.html"
+          class="block mb-2 text-lg font-medium md:ml-10 md:mb-0 text-brand-text hover:text-brand-accennt-primary-dark">Offers</a>
+        <a href="contact.php"
+          class="block mb-2 text-lg font-medium md:ml-10 md:mb-0 text-brand-text hover:text-brand-accennt-primary-dark">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container my-16">
+    <h1 class="mb-16 text-3xl font-semibold text-center md:text-4xl text-brand-text">Loan Application Form</h1>
+    <div class="max-w-xl mx-auto rounded-lg shadow-lg bg-brand-secondary">
+      <form>
+        <div class="grid grid-cols-2 gap-5 px-6 py-8">
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Name *</label>
+            </div>
+            <div class="mb-8">
+              <input type="text" name="name" required
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+            </div>
+          </div>
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Email *</label>
+            </div>
+            <div class="mb-8">
+              <input type="email" name="name" required
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+            </div>
+          </div>
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Phone *</label>
+            </div>
+            <div class="mb-8">
+              <input type="text" name="name" required
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+            </div>
+          </div>
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">PAN Number *</label>
+            </div>
+            <div class="mb-8">
+              <input type="text" name="name" required
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+            </div>
+          </div>
+
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Father's Name *</label>
+            </div>
+            <div class="mb-8">
+              <input type="text" name="name" required
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+            </div>
+          </div>
+
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Mother's Name *</label>
+            </div>
+            <div class="mb-8">
+              <input type="text" name="name" required
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+            </div>
+          </div>
+
+          <div class="col-span-2">
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Address *</label>
+            </div>
+            <div class="mb-7">
+              <textarea name="address" cols="30" rows="5"
+                class="w-full px-5 py-2 mb-3 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary"></textarea>
+            </div>
+          </div>
+          <div class="col-span-2">
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Date of Birth *</label>
+            </div>
+            <div class="mb-8">
+              <div class="grid grid-cols-3 gap-4">
+                <div>
+                  <input type="number" name="name" required placeholder="Day"
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+
+                </div>
+                <div>
+                  <input type="number" name="name" required placeholder="Month"
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+
+                </div>
+                <div>
+                  <input type="number" name="name" required placeholder="Year"
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Select Branch*</label>
+            </div>
+            <div class="mb-8">
+              <select name="type"
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                <option value="Kolkata">Kolkata</option>
+                <option value="Hooghly">Hooghly</option>
+                <option value="Bardhamaan">Bardhamaan</option>
+                <option value="Asansol">Asansol</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Select Loan Type*</label>
+            </div>
+            <div class="mb-8">
+              <select name="type" id="loanType" onchange="selectValue()"
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                <option value="Education">Education</option>
+                <option value="Home">Home</option>
+                <option value="Personal">Personal</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- For Education Loan -->
+          <div class="hidden col-span-2" id="education">
+            <div class="grid grid-cols-2 gap-5">
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Loan Amount *</label>
+                </div>
+                <div>
+                  <input type="number" name="name" required
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Tenure *</label>
+                </div>
+                <div>
+                  <input type="number" name="name" required placeholder="No of years"
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">University Name*</label>
+                </div>
+                <div class="mb-8">
+                  <input type="text" name="name" required
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Course Major *</label>
+                </div>
+                <div class="mb-8">
+                  <input type="text" name="name" required
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Contact Person at the University *</label>
+                </div>
+                <div class="mb-8">
+                  <input type="text" name="name" required
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Email of Contact Person at the University *</label>
+                </div>
+                <div class="mb-8">
+                  <input type="email" name="name" required
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div class="col-span-2">
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Address of University *</label>
+                </div>
+                <div class="mb-7">
+                  <textarea name="address" cols="30" rows="5"
+                    class="w-full px-5 py-2 mb-3 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- For Home Loan -->
+          <div class="hidden col-span-2" id="home">
+            <div class="grid grid-cols-2 gap-5">
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Employement Type*</label>
+                </div>
+                <div class="mb-8">
+                  <select name="type"
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                    <option value="self employed">Self Employed</option>
+                    <option value="salaried">Salaried</option>
+                    <option value="businessman">Businessman</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Employer Name*</label>
+                </div>
+                <div class="mb-8">
+                  <input type="text" name="name" required
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Loan Amount *</label>
+                </div>
+                <div>
+                  <input type="number" name="name" required
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Tenure *</label>
+                </div>
+                <div>
+                  <input type="number" name="name" required placeholder="No of years"
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Employement Status*</label>
+                </div>
+                <div class="mb-8">
+                  <select name="type"
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                    <option value="full time">Full Time</option>
+                    <option value="on probation">On Probation</option>
+                    <option value="contractual">Contractual</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Organization Type*</label>
+                </div>
+                <div class="mb-8">
+                  <select name="type"
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                    <option value="public sector unit">Public Sector Unit</option>
+                    <option value="listed private company">Listed Private Company</option>
+                    <option value="mnc">MNC</option>
+                    <option value="central/state government">Central / State Government</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-span-2">
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">If selected Other, please mention</label>
+                </div>
+                <div class="mb-8">
+                  <input type="text" name="name"
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Employer Contact*</label>
+                </div>
+                <div class="mb-8">
+                  <input type="text" name="name" required
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Enter Gross Salary (in LPA)*</label>
+                </div>
+                <div class="mb-8">
+                  <input type="text" name="name" required
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div class="col-span-2">
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Address of Property *</label>
+                </div>
+                <div class="mb-7">
+                  <textarea name="address" cols="30" rows="5"
+                    class="w-full px-5 py-2 mb-3 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- For Personal Loan -->
+          <div class="hidden col-span-2" id="personal">
+            <div class="grid grid-cols-2 gap-5">
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Loan Amount *</label>
+                </div>
+                <div>
+                  <input type="number" name="name" required
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Tenure *</label>
+                </div>
+                <div>
+                  <input type="number" name="name" required placeholder="No of years"
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div class="col-span-2">
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Loan Type*</label>
+                </div>
+                <div class="mb-8">
+                  <select name="type"
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                    <option value="For Small Business">For Small Business</option>
+                    <option value="Auto Mobile Loan">Auto Mobile Loan</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-span-2">
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">If selected Other, please mention</label>
+                </div>
+                <div class="mb-8">
+                  <input type="text" name="name"
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2">
+                  <label class="text-lg font-normal text-brand-text">Enter Gross Salary (in LPA)*</label>
+                </div>
+                <div class="mb-8">
+                  <input type="text" name="name" required
+                    class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-2">
+            <button type="submit" name="create" class="w-full shadow-lg btn-primary">Apply</button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="./script.js"></script>
+  <script>
+    const loanType = document.getElementById("loanType");
+    const home = document.getElementById("home");
+    const education = document.getElementById("education");
+    const personal = document.getElementById("personal");
+
+    function selectValue() {
+      let value = loanType.value;
+
+      if (value == "Education") {
+        personal.classList.remove("block")
+        personal.classList.add("hidden");
+        home.classList.remove("block")
+        home.classList.add("hidden");
+        education.classList.add("block");
+        education.classList.remove("hidden")
+      }
+      else if (value == "Personal") {
+        home.classList.remove("block")
+        home.classList.add("hidden");
+        education.classList.remove("block")
+        education.classList.add("hidden");
+        personal.classList.add("block");
+        personal.classList.remove("hidden")
+      }
+      else if (value == "Home") {
+        education.classList.remove("block")
+        education.classList.add("hidden");
+        personal.classList.remove("block")
+        personal.classList.add("hidden");
+        home.classList.add("block");
+        home.classList.remove("hidden")
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>
