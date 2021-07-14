@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/style.css">
+  <title>Bankrr | User Profile</title>
+</head>
+
+<body class="bg-brand-primary">
+  <nav class="bg-brand-primary">
+    <div class="container py-8 shadow-lg lg:py-8">
+      <div class="">
+        <div>
+          <a href="dashboard.php" class="text-2xl font-bold text-brand-accent-primary"><i
+              class="fa fa-chevron-left"></i> Back To Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container my-32">
+    <div class="max-w-2xl px-6 py-8 mx-auto rounded-lg shadow-lg bg-brand-secondary">
+      <div class="flex flex-col justify-center">
+        <div class="mx-auto mb-10 -mt-24">
+          <img src="../assests/man.jpg" alt="" class="w-40 h-40 bg-center rounded-full ">
+        </div>
+
+        <div>
+          <h1 class="mb-6 text-3xl font-semibold text-center text-brand-accent-secondary-dark">John Doe</h1>
+          <h3 class="mb-6 text-xl font-medium text-center text-brand-text">Savings Account</h3>
+          <h3 class="mb-6 text-xl font-medium text-center text-brand-text">Account No - 3698754695</h3>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="flex justify-between mb-8">
+          <div>
+            <h1 class="text-base font-normal text-brand-text">IFSC - HDFC000675</h1>
+          </div>
+          <div>
+            <h1 class="text-base font-normal text-brand-text">HDFC Bank, Shyambazar</h1>
+          </div>
+        </div>
+
+        <div class="flex justify-between mb-8">
+          <div>
+            <h1 class="text-base font-normal text-brand-text">Phone - 555-5555-555</h1>
+          </div>
+          <div x-data="{ showModal : false }">
+            <!-- Button -->
+            <i @click="showModal = !showModal" class="cursor-pointer fas fa-edit text-brand-accent-secondary-dark"></i>
+
+            <!-- Modal Background -->
+            <div x-show="showModal"
+              class="fixed top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center overflow-auto text-gray-500 bg-black bg-opacity-40"
+              x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300"
+              x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+              <!-- Modal -->
+              <div x-show="showModal" class="p-6 mx-12 bg-gray-600 shadow-2xl rounded-xl sm:max-w-2xl"
+                @click.away="showModal = false" x-transition:enter="transition ease duration-100 transform"
+                x-transition:enter-start="opacity-0 scale-90 translate-y-1"
+                x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+                x-transition:leave="transition ease duration-100 transform"
+                x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+                x-transition:leave-end="opacity-0 scale-90 translate-y-1">
+                <!-- Title -->
+                <form>
+                  <div class="mb-2">
+                    <label class="text-lg font-normal text-brand-text">Enter New Phone *</label>
+                  </div>
+                  <div class="mb-8">
+                    <input type="text" required
+                      class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-secondary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                  </div>
+                </form>
+
+                <!-- Buttons -->
+                <div class="mt-5 space-x-5 text-right">
+                  <button @click="showModal = !showModal" class="px-4 py-2 text-base btn-primary">Update</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between mb-8">
+          <div>
+            <h1 class="text-base font-normal text-brand-text">Email - john.doe@gmail.com</h1>
+          </div>
+          <div x-data="{ showModal : false }">
+            <!-- Button -->
+            <i @click="showModal = !showModal" class="cursor-pointer fas fa-edit text-brand-accent-secondary-dark"></i>
+
+            <!-- Modal Background -->
+            <div x-show="showModal"
+              class="fixed top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center overflow-auto text-gray-500 bg-black bg-opacity-40"
+              x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300"
+              x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+              <!-- Modal -->
+              <div x-show="showModal" class="p-6 mx-12 bg-gray-600 shadow-2xl rounded-xl sm:max-w-2xl"
+                @click.away="showModal = false" x-transition:enter="transition ease duration-100 transform"
+                x-transition:enter-start="opacity-0 scale-90 translate-y-1"
+                x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+                x-transition:leave="transition ease duration-100 transform"
+                x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+                x-transition:leave-end="opacity-0 scale-90 translate-y-1">
+                <!-- Title -->
+                <form>
+                  <div class="mb-2">
+                    <label class="text-lg font-normal text-brand-text">Enter New Email *</label>
+                  </div>
+                  <div class="mb-8">
+                    <input type="email" required
+                      class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-secondary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                  </div>
+                </form>
+
+                <!-- Buttons -->
+                <div class="mt-5 space-x-5 text-right">
+                  <button @click="showModal = !showModal" class="px-4 py-2 text-base btn-primary">Update</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between mb-8">
+          <div>
+            <h1 class="text-base font-normal text-brand-text">DOB - 07 / 07 / 84</h1>
+          </div>
+          <div>
+            <h1 class="text-base font-normal text-brand-text">Current Balance - 547260 /-</h1>
+          </div>
+        </div>
+
+        <div class="flex justify-between mb-8">
+          <div>
+            <h1 class="text-base font-normal text-brand-text">Password - *********</h1>
+            <div x-data="{ showModal : false }">
+              <!-- Button -->
+              <h1 @click="showModal = !showModal" class="text-sm font-light cursor-pointer text-brand-text-dark">Change
+                Password</h1>
+
+              <!-- Modal Background -->
+              <div x-show="showModal"
+                class="fixed top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center overflow-auto text-gray-500 bg-black bg-opacity-40"
+                x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300"
+                x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                <!-- Modal -->
+                <div x-show="showModal" class="p-6 mx-12 bg-gray-600 shadow-2xl rounded-xl sm:max-w-2xl"
+                  @click.away="showModal = false" x-transition:enter="transition ease duration-100 transform"
+                  x-transition:enter-start="opacity-0 scale-90 translate-y-1"
+                  x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+                  x-transition:leave="transition ease duration-100 transform"
+                  x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+                  x-transition:leave-end="opacity-0 scale-90 translate-y-1">
+                  <!-- Title -->
+                  <form>
+                    <div class="mb-2">
+                      <label class="text-lg font-normal text-brand-text">Previous Password *</label>
+                    </div>
+                    <div class="mb-8">
+                      <input type="text" required
+                        class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-secondary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                    </div>
+
+                    <div class="mb-2">
+                      <label class="text-lg font-normal text-brand-text">New Password *</label>
+                    </div>
+                    <div class="mb-8">
+                      <input type="text" required
+                        class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-secondary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                    </div>
+
+                    <div class="mb-2">
+                      <label class="text-lg font-normal text-brand-text">Confirm New Password *</label>
+                    </div>
+                    <div class="mb-8">
+                      <input type="text" required
+                        class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-secondary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                    </div>
+                  </form>
+
+                  <!-- Buttons -->
+                  <div class="mt-5 space-x-5 text-right">
+                    <button @click="showModal = !showModal" class="px-4 py-2 text-base btn-primary">Update</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <i class="text-base font-normal cursor-pointer text-brand-accent-secondary-dark fa fa-eye"></i>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"
+    integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

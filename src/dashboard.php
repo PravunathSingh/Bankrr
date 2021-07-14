@@ -24,7 +24,7 @@
 
       <div class="grid gap-10 place-content-evenly place-items-center">
         <div class="mb-4">
-          <a href="#" class="transition-all text-brand-accent-secondary hover:text-brand-accent-primary"><i
+          <a href="userProfile.html" class="transition-all text-brand-accent-secondary hover:text-brand-accent-primary"><i
               class="fa fa-user fa-2x"></i></a>
         </div>
         <div class="mb-4">
