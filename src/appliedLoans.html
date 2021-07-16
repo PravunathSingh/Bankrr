@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/style.css">
+  <title>Bankrr | User Profile</title>
+</head>
+
+<body class="bg-brand-primary">
+  <nav class="bg-brand-primary">
+    <div class="container py-4 shadow-lg">
+      <div class="">
+        <div>
+          <a href="dashboard.php" class="text-2xl font-bold text-brand-accent-primary"><i
+              class="fa fa-chevron-left"></i> Back To Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container my-20">
+    <h1 class="mb-10 text-3xl font-semibold text-center text-brand-accennt-primary-dark">Applied Loan Details</h1>
+
+    <div class="max-w-2xl py-12 mx-auto shadow-lg bg-brand-secondary rounded-xl">
+      <h3 class="mb-6 text-xl font-normal text-center text-brand-text">Loan Type : <span
+          class="font-semibold text-brand-accennt-primary-dark">Home Loan</span></h3>
+      <h3 class="mb-6 text-xl font-normal text-center text-brand-text">Application Date : 13/07/2021</h3>
+      <h3 class="mb-6 text-xl font-normal text-center text-brand-text">Loan Application ID : HM123456</h3>
+      <h3 class="mb-6 text-xl font-normal text-center text-brand-text">Loan Amount : 500000 /-</h3>
+      <h3 class="mb-6 text-xl font-normal text-center text-brand-text">Loan Status : <span class="text-red-400"
+          id="loanStatus">Unapproved</span></h3>
+
+      <div id="afterLoanApproved" class="hidden">
+        <h3 class="mb-6 text-xl font-normal text-center text-brand-text">Loan Tenure : 5 years</h3>
+        <h3 class="mb-6 text-xl font-normal text-center text-brand-text">Loan Interest Rate : 6.65 %</h3>
+        <h3 class="mb-6 text-xl font-normal text-center text-brand-text">EMI : 10000 /-</h3>
+        <h3 class="text-xl font-normal text-center text-brand-text">Payable EMIs : 60</h3>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    let loanStatus = document.getElementById("loanStatus")
+    const afterLoanApproved = document.getElementById("afterLoanApproved");
+
+    document.addEventListener("DOMContentLoaded", e => {
+      if (loanStatus.innerText === "Approved") {
+        loanStatus.classList.remove("text-red-400")
+        loanStatus.classList.add("text-green-400")
+
+        afterLoanApproved.classList.remove("hidden")
+        afterLoanApproved.classList.add('block')
+      } else {
+        alert(`Your Loan Hasn't Been Approved Yet. A Bank Official Will Soon Contact You. Thank You For Your Patience`)
+      }
+    })
+  </script>
+</body>
+
+</html>
