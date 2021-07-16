@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../dist/style.css" />
+  <title>Bankrr | All Transactions</title>
+</head>
+
+<body class="bg-brand-primary">
+  <section class="container">
+    <div class="my-20">
+      <h1 class="mb-20 text-4xl font-bold text-center md:text-5xl text-brand-text">Create Bankrr Account</h1>
+    </div>
+    <div class="grid place-content-center place-items-center">
+      <form method="POST" action="post/account.php" enctype="multipart/form-data">
+        <div
+          class="grid grid-cols-2 gap-5 py-12 mb-20 shadow-xl place-content-between px-7 bg-brand-secondary rounded-xl">
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Name *</label>
+            </div>
+            <div class="mb-8">
+              <input type="text" name="name" required
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+            </div>
+          </div>
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Email *</label>
+            </div>
+            <div class="mb-8">
+              <input type="email" name="email" required
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+            </div>
+          </div>
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Phone *</label>
+            </div>
+            <div class="mb-8">
+              <input type="text" name="phone" required
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+            </div>
+          </div>
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Account Number *</label>
+            </div>
+            <div class="mb-8">
+              <input type="text" name="num" required
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+            </div>
+          </div>
+
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Password *</label>
+            </div>
+            <div class="mb-8">
+              <input type="password" name="password" required
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+            </div>
+          </div>
+          <div>
+            <div class="mb-2">
+              <label class="text-lg font-normal text-brand-text">Confirm Password *</label>
+            </div>
+            <div class="mb-8">
+              <input type="password" name="ConfirmPassword" required
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+            </div>
+          </div>
+          <div class="col-span-2">
+            <button type="submit" name="signup" class="w-full shadow-lg btn-primary">Sign-Up To Bankrr</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>
