@@ -30,14 +30,13 @@
     <h1 class="mb-20 text-3xl font-bold text-center md:text-4xl text-brand-text"><span
         class="text-brand-accent-primary">Sign In</span> / <a href="signup(admin).html"> Sign Up</a> </h1>
 
-    <div
-      class="grid px-5 shadow-xl md:grid-cols-2 md:gap-2 md:place-content-center md:place-items-center bg-brand-secondary rounded-xl ">
+    <div class="grid px-5 shadow-xl md:grid-cols-2 md:place-content-center md:gap-6 bg-brand-secondary rounded-xl ">
 
       <div class="hidden rounded-xl md:block">
-        <img src="../assests/signin(admin).jpg" alt="">
+        <img src="../../assests/signin(admin).jpg" alt="">
       </div>
 
-      <div>
+      <div class="md:my-10">
         <form>
           <div class="px-4 py-8">
             <div class="mb-2">
@@ -45,14 +44,14 @@
             </div>
             <div class="mb-8">
               <input type="text" required
-                class="w-full px-20 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
             </div>
             <div class="mb-2">
               <label class="text-lg font-normal text-brand-text">Password *</label>
             </div>
             <div class="mb-11">
               <input type="password" required
-                class="w-full px-20 py-2 mb-3 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                class="w-full px-5 py-2 mb-3 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
               <div x-data="{ showModal : false }">
                 <!-- Button -->
                 <h1 @click="showModal = !showModal" class="text-sm font-light cursor-pointer text-brand-text-dark">
