@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../dist/style.css">
+  <title>Bankrr |Edit Loans Details</title>
+</head>
+
+<body class="bg-brand-primary">
+  <nav class="bg-brand-primary">
+    <div class="container py-4 shadow-lg">
+      <div class="">
+        <div>
+          <a href="adminDashboard.html" class="text-2xl font-bold text-brand-accent-primary"><i
+              class="fa fa-chevron-left"></i> Back To Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container my-20">
+    <h1 class="mb-10 text-3xl font-bold text-center md:text-4xl text-brand-text">Edit Loan Details</h1>
+
+    <div class="max-w-2xl px-5 py-4 mx-auto rounded-lg shadow-lg bg-brand-secondary">
+      <form>
+        <div>
+          <div class="mb-2">
+            <label class="text-lg font-normal text-brand-text">Loan Category *</label>
+          </div>
+          <div class="mb-8">
+            <input type="text" required
+              class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+          </div>
+        </div>
+
+        <div>
+          <div class="mb-2">
+            <label class="text-lg font-normal text-brand-text">Heading Text *</label>
+          </div>
+          <div class="mb-8">
+            <input type="text" required
+              class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+          </div>
+        </div>
+
+        <div>
+          <div class="mb-2">
+            <label class="text-lg font-normal text-brand-text">Service One *</label>
+          </div>
+          <div class="mb-8">
+            <input type="text" required
+              class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+          </div>
+        </div>
+
+        <div>
+          <div class="mb-2">
+            <label class="text-lg font-normal text-brand-text">Service Two *</label>
+          </div>
+          <div class="mb-8">
+            <input type="text" required
+              class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+          </div>
+        </div>
+
+        <div>
+          <div class="mb-2">
+            <label class="text-lg font-normal text-brand-text">Service Three *</label>
+          </div>
+          <div class="mb-8">
+            <input type="text" required
+              class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+          </div>
+        </div>
+
+        <div>
+          <div class="mb-2">
+            <label class="text-lg font-normal text-brand-text">Interest Rate *</label>
+          </div>
+          <div class="mb-8">
+            <input type="text" required
+              class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-primary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+          </div>
+        </div>
+
+        <div class="mb-8 has-tooltip">
+          <label
+            class="tracking-wide uppercase transition-all outline-none cursor-pointer text-brand-text hover:text-brand-accent-primary">
+            <i class="mr-2 fa fa-cloud-upload-alt"></i>
+            <span class="mt-2 text-base leading-normal"><span
+                class="p-3 -mt-16 text-sm font-light lowercase rounded shadow-lg md:-mt-12 bg-brand-primary tooltip text-brand-accent-secondary-dark">Total
+                Size
+                should
+                be less than 2 MB</span> Upload Banner Image</span>
+            <input type="file" accept="image/jpeg, image/png" name="doc_image" class="hidden" id="customFile" />
+          </label>
+        </div>
+
+        <button type="submit" class="w-full mb-5 btn-primary">Add Changes</button>
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>
