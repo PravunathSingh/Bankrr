@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../dist/style.css">
+  <title>Bankrr | Loan Details(Admin)</title>
+</head>
+
+<body class="bg-brand-primary">
+  <nav class="bg-brand-primary">
+    <div class="container py-4 shadow-lg">
+      <div class="">
+        <div>
+          <a href="adminDashboard.html" class="text-2xl font-bold text-brand-accent-primary"><i
+              class="fa fa-chevron-left"></i> Back To Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <section class="container">
+    <div class="flex justify-end mt-20">
+      <div class="has-tooltip">
+        <span class="mt-2 text-base leading-normal"><span
+            class="p-3 -mt-24 text-sm font-light rounded shadow-lg md:-mt-12 bg-brand-primary tooltip text-brand-accent-secondary-dark">
+            Add New Loan</span>
+          <span><a href="addLoan.html"><i
+                class="cursor-pointer fa fa-plus-circle fa-2x text-brand-accent-secondary-dark hover:text-brand-accent-primary"></i></a></span>
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+          <div class="overflow-hidden border-b shadow bg-brand-primarysm:rounded-lg">
+            <table class="min-w-full divide-y bg-brand-primary">
+              <thead class="bg-brand-primary">
+                <tr>
+                  <th scope="col"
+                    class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-text">
+                    Loan Category
+                  </th>
+                  <th scope="col"
+                    class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-text">
+                    Heading Text
+                  </th>
+                  <th scope="col"
+                    class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-text">
+                    Service 1
+                  </th>
+                  <th scope="col"
+                    class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-text">
+                    Service 2
+                  </th>
+                  <th scope="col"
+                    class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-text">
+                    Service 3
+                  </th>
+                  <th scope="col"
+                    class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-text">
+                    Interest Rate
+                  </th>
+                  <th scope="col" class="relative px-6 py-3">
+                    <span class="sr-only">view</span>
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody class="divide-y divide-gray-200 bg-brand-primary">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="flex items-center">
+                      <div class="text-sm font-medium text-brand-text">
+                        Home Loan
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-brand-text">Lorem ipsum dolor sit amet...</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-brand-text">Lorem sit amet...</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-brand-text">Lorem sit amet...</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-brand-text">Lorem sit amet...</div>
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-200 whitespace-nowrap">
+                    6.67%
+                  </td>
+                  <td class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
+                    <a href="editLoanDetails.html"
+                      class="text-brand-accent-primary hover:text-brand-accent-secondary"><i
+                        class="fa fa-pencil-alt"></i></a>
+                  </td>
+                  <td class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
+                    <i class="text-red-300 cursor-pointer fa fa-trash-alt"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

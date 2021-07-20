@@ -36,7 +36,7 @@
 
         <div>
           <h1 class="mb-6 text-3xl font-semibold text-center text-brand-accent-secondary-dark">John Doe</h1>
-          <h3 class="mb-6 text-xl font-medium text-center text-brand-text">Home Loan</h3>
+          <h3 class="mb-6 text-xl font-medium text-center text-brand-text" id="loanType">Home Loan</h3>
           <h3 class="mb-6 text-xl font-medium text-center text-brand-text">Account No - 3698754695</h3>
         </div>
       </div>
@@ -73,30 +73,155 @@
           </div>
         </div>
 
-        <div class="mb-8">
+        <div class="flex justify-between mb-8">
           <div>
             <h1 class="text-base font-normal text-brand-text">Uploaded Address Proof - PAN (KSM123456)
             </h1>
           </div>
-        </div>
-
-        <div class="mb-8">
           <div>
             <h1 class="text-base font-normal cursor-pointer text-brand-accent-secondary">View Document
             </h1>
           </div>
         </div>
 
-        <div class="mb-8">
+        <div class="mb-8 md:flex md:justify-between">
+          <div class="mb-8 md:mb-0">
+            <h1 class="text-base font-normal text-brand-text">Loan Applied On - 28 / 06 / 2021
+            </h1>
+          </div>
           <div>
-            <h1 class="text-base font-normal text-brand-text">Account Created On - 28 / 06 / 2021
+            <h1 class="text-base font-normal text-brand-text">Loan Application ID - 123456
             </h1>
           </div>
         </div>
 
+        <!-- Home Loan -->
+
+        <div id="home" class="hidden">
+          <div class="mb-8 md:flex md:justify-between">
+            <div class="mb-8 md:mb-0">
+              <h1 class="text-base font-normal text-brand-text">Employment Type - Salaried
+              </h1>
+            </div>
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Employer Name - AchieveX Solutions
+              </h1>
+            </div>
+          </div>
+
+          <div class="flex justify-between mb-8">
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Loan Amount - 500000 /-
+              </h1>
+            </div>
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Tenure - 5 years
+              </h1>
+            </div>
+          </div>
+
+          <div class="flex justify-between mb-8">
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Employement Status - Full time
+              </h1>
+            </div>
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Organization Type - Listed Private Company
+              </h1>
+            </div>
+          </div>
+
+          <div class="flex justify-between mb-8">
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Employer Contact - employer@abcd
+              </h1>
+            </div>
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Gross Salary - 5.6 LPA
+              </h1>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Address of Property - 133, Lorem Road, Ipsum Colony,
+                Kolkata - 712488
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Loan -->
+        <div id="education" class="hidden">
+          <div class="flex justify-between mb-8">
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Loan Amount - 500000 /-
+              </h1>
+            </div>
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Tenure - 5 years
+              </h1>
+            </div>
+          </div>
+
+          <div class="flex justify-between mb-8">
+            <div>
+              <h1 class="text-base font-normal text-brand-text">University Name - ABCD University, USA
+              </h1>
+            </div>
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Course Major - Lorem Ipsum
+              </h1>
+            </div>
+          </div>
+
+          <div class="mb-8 md:flex md:justify-between">
+            <div class="mb-8 md:mb-0">
+              <h1 class="text-base font-normal text-brand-text">Point of Contact at University - Jane Doe
+              </h1>
+            </div>
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Email of POC - janedoe@gmail.com
+              </h1>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Address of University - 133, Lorem Road, Ipsum Colony,
+                Kolkata - 712488
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Loan -->
+        <div id="personal" class="hidden">
+          <div class="flex justify-between mb-8">
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Loan Amount - 500000 /-
+              </h1>
+            </div>
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Tenure - 5 years
+              </h1>
+            </div>
+          </div>
+
+          <div class="mb-8 md:flex md:justify-between">
+            <div class="mb-8 md:mb-0">
+              <h1 class="text-base font-normal text-brand-text">Reason for Loan - Lorem Ipsum reason
+              </h1>
+            </div>
+            <div>
+              <h1 class="text-base font-normal text-brand-text">Gross Salary - 5.6 LPA
+              </h1>
+            </div>
+          </div>
+        </div>
 
         <button class="w-full btn-primary">
-          Approve User
+          Approve Loan
         </button>
 
 
@@ -108,6 +233,26 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"
     integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    const loanType = document.getElementById("loanType")
+    const home = document.getElementById("home")
+    const education = document.getElementById("education")
+    const personal = document.getElementById("personal")
+
+    document.addEventListener("DOMContentLoaded", (e) => {
+      if (loanType.innerText == "Home Loan") {
+        home.classList.remove("hidden")
+        home.classList.add("block")
+      } else if (loanType.innerText == "Education Loan") {
+        education.classList.remove("hidden")
+        education.classList.add("block")
+      } else if (loanType.innerText == "Personal Loan") {
+        personal.classList.remove("hidden")
+        personal.classList.add("block")
+      }
+    })
+  </script>
 </body>
 
 </html>
