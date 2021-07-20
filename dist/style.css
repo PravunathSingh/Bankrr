@@ -1185,6 +1185,10 @@ body {
   width: 2.5rem;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -1199,6 +1203,10 @@ body {
 
 .max-w-lg {
   max-width: 32rem;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
 }
 
 .flex-shrink-0 {
@@ -1265,6 +1273,10 @@ body {
 
 .place-content-center {
   place-content: center;
+}
+
+.place-content-start {
+  place-content: start;
 }
 
 .place-content-between {
@@ -1382,6 +1394,11 @@ body {
 
 .border-transparent {
   border-color: transparent;
+}
+
+.border-brand-accent-secondary {
+  --tw-border-opacity: 1;
+  border-color: rgba(0, 168, 204, var(--tw-border-opacity));
 }
 
 .bg-brand-primary {
@@ -1548,9 +1565,9 @@ body {
   padding-bottom: 2.25rem;
 }
 
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 
 .pl-4 {
@@ -1938,6 +1955,10 @@ body {
   }
 }
 
+.hover\:border-2:hover {
+  border-width: 2px;
+}
+
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
@@ -2212,6 +2233,11 @@ body {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .md\:leading-snug {
