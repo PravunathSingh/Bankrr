@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../dist/style.css">
+  <title>Bankrr |Edit Loans Details</title>
+</head>
+
+<body class="bg-brand-primary">
+  <nav class="bg-brand-primary">
+    <div class="container py-4 shadow-lg">
+      <div class="">
+        <div>
+          <a href="adminDashboard.html" class="text-2xl font-bold text-brand-accent-primary"><i
+              class="fa fa-chevron-left"></i> Back To Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container">
+    <div class="mx-auto">
+      <div class="flex flex-col mt-20">
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+            <div class="overflow-hidden border-b shadow bg-brand-primarysm:rounded-lg">
+              <table class="min-w-full divide-y bg-brand-primary">
+                <thead class="bg-brand-secondary">
+                  <tr>
+                    <th scope="col"
+                      class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-text">
+                      User
+                    </th>
+                    <th scope="col"
+                      class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-text">
+                      User Branch & IFSC
+                    </th>
+                    <th scope="col"
+                      class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-text">
+                      Loan Type
+                    </th>
+                    <th scope="col"
+                      class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-text">
+                      Tenure and Installments
+                    </th>
+                    <th scope="col"
+                      class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-brand-text">
+                      Payable Installments Left
+                    </th>
+                    <th scope="col" class="relative px-6 py-3">
+                      <span class="sr-only">Pay</span>
+                    </th>
+                    <th scope="col" class="relative px-6 py-3">
+                      <span class="sr-only">Message</span>
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody class="divide-y-2 divide-brand-text-dark bg-brand-primary">
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0 w-10 h-10">
+                          <img class="w-10 h-10 rounded-full"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+                            alt="">
+                        </div>
+                        <div class="ml-4">
+                          <div class="text-sm font-medium text-brand-text">
+                            Jane Cooper
+                          </div>
+                          <div class="text-sm text-brand-text-dark">
+                            jane.cooper@example.com
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-brand-text">Kolkata</div>
+                      <div class="text-sm text-brand-text-dark">BANKR00124</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-brand-text">Home Loan</div>
+                      <div class="text-sm text-brand-text-dark">6.67%</div>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-brand-text whitespace-nowrap">
+                      <div class="text-sm text-brand-text">5 years</div>
+                      <div class="text-sm text-brand-text-dark">60 Installments</div>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-brand-text whitespace-nowrap">
+                      <span
+                        class="inline-flex px-2 mr-8 text-xs font-semibold leading-5 text-red-800 bg-red-100 rounded-full cursor-pointer count">
+                        60
+                      </span>
+
+                      <span x-data="{ showModal : false }">
+                        <!-- Button -->
+                        <span @click="showModal = !showModal"
+                          class="cursor-pointer text-brand-accent-primary hover:text-brand-accent-secondary">Message</span>
+
+                        <!-- Modal Background -->
+                        <div x-show="showModal"
+                          class="fixed top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center overflow-auto text-gray-500 bg-black bg-opacity-40"
+                          x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300"
+                          x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                          <!-- Modal -->
+                          <div x-show="showModal" class="p-6 mx-12 bg-gray-600 shadow-2xl rounded-xl sm:max-w-2xl"
+                            @click.away="showModal = false" x-transition:enter="transition ease duration-100 transform"
+                            x-transition:enter-start="opacity-0 scale-90 translate-y-1"
+                            x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+                            x-transition:leave="transition ease duration-100 transform"
+                            x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+                            x-transition:leave-end="opacity-0 scale-90 translate-y-1">
+                            <!-- Title -->
+                            <form>
+
+                              <div class="mb-2">
+                                <label class="text-lg font-normal text-brand-text">Message *</label>
+                              </div>
+                              <div class="mb-8">
+                                <textarea
+                                  class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-secondary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary"
+                                  cols="40" rows="5"></textarea>
+                              </div>
+                            </form>
+
+                            <!-- Buttons -->
+                            <div class="mt-5 space-x-5 text-right">
+                              <button @click="showModal = !showModal"
+                                class="px-4 py-2 text-base btn-primary">Send</button>
+                            </div>
+                          </div>
+                        </div>
+                      </span>
+                    </td>
+                  </tr>
+
+                  <!-- More people... -->
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0 w-10 h-10">
+                          <img class="w-10 h-10 rounded-full"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+                            alt="">
+                        </div>
+                        <div class="ml-4">
+                          <div class="text-sm font-medium text-brand-text">
+                            Jane Cooper
+                          </div>
+                          <div class="text-sm text-brand-text-dark">
+                            jane.cooper@example.com
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-brand-text">Kolkata</div>
+                      <div class="text-sm text-brand-text-dark">BANKR00124</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-brand-text">Home Loan</div>
+                      <div class="text-sm text-brand-text-dark">6.67%</div>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-brand-text whitespace-nowrap">
+                      <div class="text-sm text-brand-text">5 years</div>
+                      <div class="text-sm text-brand-text-dark">60 Installments</div>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-brand-text whitespace-nowrap">
+                      <span
+                        class="inline-flex px-2 mr-8 text-xs font-semibold leading-5 text-red-800 bg-red-100 rounded-full cursor-pointer count">
+                        50
+                      </span>
+
+                      <span x-data="{ showModal : false }">
+                        <!-- Button -->
+                        <span @click="showModal = !showModal"
+                          class="cursor-pointer text-brand-accent-primary hover:text-brand-accent-secondary">Message</span>
+
+                        <!-- Modal Background -->
+                        <div x-show="showModal"
+                          class="fixed top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center overflow-auto text-gray-500 bg-black bg-opacity-40"
+                          x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300"
+                          x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                          <!-- Modal -->
+                          <div x-show="showModal" class="p-6 mx-12 bg-gray-600 shadow-2xl rounded-xl sm:max-w-2xl"
+                            @click.away="showModal = false" x-transition:enter="transition ease duration-100 transform"
+                            x-transition:enter-start="opacity-0 scale-90 translate-y-1"
+                            x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+                            x-transition:leave="transition ease duration-100 transform"
+                            x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+                            x-transition:leave-end="opacity-0 scale-90 translate-y-1">
+                            <!-- Title -->
+                            <form>
+
+                              <div class="mb-2">
+                                <label class="text-lg font-normal text-brand-text">Message *</label>
+                              </div>
+                              <div class="mb-8">
+                                <textarea
+                                  class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-secondary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary"
+                                  cols="40" rows="5"></textarea>
+                              </div>
+                            </form>
+
+                            <!-- Buttons -->
+                            <div class="mt-5 space-x-5 text-right">
+                              <button @click="showModal = !showModal"
+                                class="px-4 py-2 text-base btn-primary">Send</button>
+                            </div>
+                          </div>
+                        </div>
+                      </span>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">
+                        <div class="flex-shrink-0 w-10 h-10">
+                          <img class="w-10 h-10 rounded-full"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+                            alt="">
+                        </div>
+                        <div class="ml-4">
+                          <div class="text-sm font-medium text-brand-text">
+                            Jane Cooper
+                          </div>
+                          <div class="text-sm text-brand-text-dark">
+                            jane.cooper@example.com
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-brand-text">Kolkata</div>
+                      <div class="text-sm text-brand-text-dark">BANKR00124</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-brand-text">Home Loan</div>
+                      <div class="text-sm text-brand-text-dark">6.67%</div>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-brand-text whitespace-nowrap">
+                      <div class="text-sm text-brand-text">5 years</div>
+                      <div class="text-sm text-brand-text-dark">60 Installments</div>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-brand-text whitespace-nowrap">
+                      <span
+                        class="inline-flex px-2 mr-8 text-xs font-semibold leading-5 text-red-800 bg-red-100 rounded-full cursor-pointer count">
+                        40</span>
+
+                      <span x-data="{ showModal : false }">
+                        <!-- Button -->
+                        <span @click="showModal = !showModal"
+                          class="cursor-pointer text-brand-accent-primary hover:text-brand-accent-secondary">Message</span>
+
+                        <!-- Modal Background -->
+                        <div x-show="showModal"
+                          class="fixed top-0 bottom-0 left-0 right-0 z-50 flex items-center justify-center overflow-auto text-gray-500 bg-black bg-opacity-40"
+                          x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0"
+                          x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300"
+                          x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                          <!-- Modal -->
+                          <div x-show="showModal" class="p-6 mx-12 bg-gray-600 shadow-2xl rounded-xl sm:max-w-2xl"
+                            @click.away="showModal = false" x-transition:enter="transition ease duration-100 transform"
+                            x-transition:enter-start="opacity-0 scale-90 translate-y-1"
+                            x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+                            x-transition:leave="transition ease duration-100 transform"
+                            x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+                            x-transition:leave-end="opacity-0 scale-90 translate-y-1">
+                            <!-- Title -->
+                            <form>
+                              <div class="mb-2">
+                                <label class="text-lg font-normal text-brand-text">User Email*</label>
+                              </div>
+                              <div class="mb-8">
+                                <input type="email" required
+                                  class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-secondary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary">
+                              </div>
+
+                              <div class="mb-2">
+                                <label class="text-lg font-normal text-brand-text">Message *</label>
+                              </div>
+                              <div class="mb-8">
+                                <textarea
+                                  class="w-full px-5 py-2 text-lg font-normal rounded-lg shadow-lg outline-none bg-brand-secondary text-brand-text focus:ring-1 focus:ring-brand-accent-secondary"
+                                  cols="40" rows="5"></textarea>
+                              </div>
+                            </form>
+
+                            <!-- Buttons -->
+                            <div class="mt-5 space-x-5 text-right">
+                              <button @click="showModal = !showModal"
+                                class="px-4 py-2 text-base btn-primary">Send</button>
+                            </div>
+                          </div>
+                        </div>
+                      </span>
+                    </td>
+                  </tr>
+                  <!-- More people... -->
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"
+    integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      alert("Click on the Badge to pay an EMI")
+    })
+
+    let count = document.querySelectorAll('.count');
+
+    count.forEach(ele => {
+      let counter = ele.innerText
+      ele.addEventListener('click', () => {
+        counter--
+        ele.innerText = counter;
+      })
+    })
+  </script>
+
+</body>
+
+</html>

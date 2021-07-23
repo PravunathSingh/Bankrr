@@ -80,12 +80,16 @@
           </div>
         </div>
 
+        <!-- Download Document -->
+
         <div class="mb-8">
           <div>
-            <h1 class="text-base font-normal cursor-pointer text-brand-accent-secondary">View Document
-            </h1>
+            <a href="../../assests/card-offer.png" target="_blank" download
+              class="text-base text-brand-accent-secondary-dark" id="download">Download Document</a>
           </div>
         </div>
+
+        <!-- Download Document -->
 
         <div class="mb-8">
           <div>
@@ -108,6 +112,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"
     integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    const download = document.getElementById("download");
+
+    download.addEventListener("click")
+  </script>
 </body>
 
 </html>
